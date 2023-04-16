@@ -120,9 +120,6 @@ public class Main {
 
         brasil.addAresta(APPA);
 
-        brasil.addAresta(ROAM);
-        brasil.addAresta(ROMT);
-
         brasil.addAresta(TOMT);
         brasil.addAresta(TOPA);
         brasil.addAresta(TOMA);
@@ -174,6 +171,9 @@ public class Main {
         Aresta ALPE = new Aresta(AL, PE, "AL-PE", 203);
         Aresta ALBA = new Aresta(AL, BA, "AL-BA", 476);
         Aresta ALSE = new Aresta(AL, SE, "AL-SE", 202);
+
+        Aresta SEAL = new Aresta(SE, AL, "SE-AL", 202);
+        Aresta SEBA = new Aresta(SE, BA, "SE-BA", 277);
         brasil.addAresta(BASE);
         brasil.addAresta(BAAL);
         brasil.addAresta(BAPE);
@@ -215,6 +215,8 @@ public class Main {
         brasil.addAresta(ALBA);
         brasil.addAresta(ALSE);
 
+        brasil.addAresta(SEAL);
+        brasil.addAresta(SEBA);
 
 
         //Fronteiras Região Centro-Oeste
@@ -330,9 +332,9 @@ public class Main {
         brasil.addAresta(PRMS);
 
 
-
-        brasil.matrizAdjacencia();
+        brasil.respostasAtividade();
         brasil.grau();
+        brasil.matrizAdjacencia();
 
     }
 }

@@ -36,7 +36,7 @@ public class Grafo {
         }
 
         System.out.println();
-        System.out.println("Matriz de Adjacência do Grafo do Brasil: ");
+        System.out.println("e) Matriz de Adjacência: ");
 
         for (Vertice v : vertices){
             System.out.print("  " + v.getNome());
@@ -54,6 +54,7 @@ public class Grafo {
     }
 
     public void grau(){
+        System.out.println();
         for (Vertice v : vertices){
             int grau = 0;
             for(Aresta a : arestas){
@@ -65,9 +66,28 @@ public class Grafo {
                 }
             }
             v.setGrau(grau);
-
+        }
+        int maior = 0;
+        for (Vertice v: vertices){
+            if(v.getGrau() > maior){
+                maior = v.getGrau();
+            }
             System.out.println("O estado " + v.getNome() + " possui grau " + v.getGrau());
         }
+        System.out.println();
+        System.out.println("Maior grau: " + maior);
+    }
+
+
+    public void respostasAtividade(){
+        System.out.println();
+        System.out.println("a) O grafo é DIRECIONADO, uma vez que há possibilidades de ir por caminhos distintos, rotas alternativas e direções específicas");
+        System.out.println("b) Ordem: " + ordem);
+        System.out.println("c) Tamanho: " + tamanho);
+        System.out.println("d) Vértice de maior grau: ");
+
+        System.out.println("f) Trajeto mais curto entre a PB e TO: PB - PE - PI - TO");
+        System.out.println("Total de km's percorrendo esse trajeto: 1871 km");
     }
 
 }
