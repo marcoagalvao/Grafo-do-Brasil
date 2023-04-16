@@ -68,14 +68,16 @@ public class Grafo {
             v.setGrau(grau);
         }
         int maior = 0;
+        String nomeMaiorGrau = "";
         for (Vertice v: vertices){
             if(v.getGrau() > maior){
                 maior = v.getGrau();
+                nomeMaiorGrau = v.getNome();
             }
             System.out.println("O estado " + v.getNome() + " possui grau " + v.getGrau());
         }
         System.out.println();
-        System.out.println("Maior grau: " + maior);
+        System.out.println("Maior grau: " + nomeMaiorGrau + " ("+ maior + ")");
     }
 
 
