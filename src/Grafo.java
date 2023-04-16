@@ -1,5 +1,10 @@
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.util.ArrayList;
 
+@Data
+@AllArgsConstructor
 public class Grafo {
 
     private ArrayList<Vertice> vertices;
@@ -31,18 +36,21 @@ public class Grafo {
         }
 
         System.out.println();
-        System.out.println("Matriz de Adjacência do Grafo do Brasil");
+        System.out.println("Matriz de Adjacência do Grafo do Brasil: ");
 
         for (Vertice v : vertices){
             System.out.print("  " + v.getNome());
         }
 
+        System.out.println();
+
         for (int i = 0; i < ordem; i++){
             System.out.print(vertices.get(i).getNome() + " ");
             for(int j = 0; j < ordem; j++){
-                System.out.print(matriz[i][j]);
+                System.out.print(" " + matriz[i][j] + "  ");
             }
             System.out.println();
         }
     }
+
 }
