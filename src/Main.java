@@ -332,6 +332,7 @@ public class Main {
 
 
         brasil.matrizAdjacencia();
+        brasil.grau();
 
     }
 }

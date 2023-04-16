@@ -53,4 +53,21 @@ public class Grafo {
         }
     }
 
+    public void grau(){
+        for (Vertice v : vertices){
+            int grau = 0;
+            for(Aresta a : arestas){
+                if(a.getOrigem() == v){
+                    grau++;
+                }
+                if(a.getDestino() == v){
+                    grau++;
+                }
+            }
+            v.setGrau(grau);
+
+            System.out.println("O estado " + v.getNome() + " possui grau " + v.getGrau());
+        }
+    }
+
 }
